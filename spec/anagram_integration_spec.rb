@@ -1,6 +1,7 @@
 require('capybara/rspec')
 require('./app')
 Capybara.app = Sinatra::Application
+set(:show_exceptions, false)
 
 describe("anagram path", {:type => :feature}) do
   it("when user enters a word and words to check, we output which words are anagrams") do
